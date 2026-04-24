@@ -769,4 +769,53 @@ footer p:hover {
     color: var(--accent);
     transform: translateY(-2px);
 }
+/* --- Custom Cursor --- */
+body {
+    cursor: none; /* Hide default cursor */
+}
 
+a, button, .btn, .menu-toggle, .contact-icon {
+    cursor: none !important;
+}
+
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.15s ease-out;
+}
+
+/* Hover effect for interactive elements */
+.cursor-hover .cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.cursor-hover .cursor-outline {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 122, 0, 0.1);
+    border-color: var(--accent);
+}
