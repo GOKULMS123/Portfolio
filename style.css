@@ -679,9 +679,12 @@ nav .container {
 
 /* --- Responsive --- */
 @media (max-width: 992px) {
-    .about-grid {
+    .about-grid, .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    .section {
+        padding: 80px 5%;
     }
 }
 
@@ -700,11 +703,10 @@ nav .container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
         transition: 0.4s ease-in-out;
         z-index: 1000;
         display: flex;
-        /* Override previous display: none */
     }
 
     .nav-links.active {
@@ -717,26 +719,149 @@ nav .container {
 
     .nav-cta {
         display: none;
-        /* Hide button on mobile inside nav bar, or move inside nav-links */
+    }
+
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 60px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 40px;
+        margin-bottom: 16px;
     }
 
     .hero-title-wrapper {
-        font-size: 20px;
-        height: 32px; /* Allow space for potential wrapping or just standard spacing */
+        font-size: 18px;
+        height: 28px;
         line-height: 1.4;
         margin-bottom: 16px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 30px;
     }
 
     .section {
         padding: 60px 5%;
     }
 
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .contact-container {
+        padding: 30px;
+    }
+    
     .contact-grid {
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+    }
+
+    .skill-card {
+        padding: 24px 20px;
+    }
+
+    .skill-icon {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .skill-card h3 {
+        font-size: 16px;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-info {
+        padding: 24px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 60px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-title-wrapper {
+        font-size: 16px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item::before {
+        left: -25px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .contact-info h3 {
+        font-size: 28px;
+    }
+
+    .contact-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 
